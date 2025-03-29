@@ -11,15 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
-import environ
 
-env = environ.Env(
-    DEBUG=(bool, False)
-)
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 
 # Quick-start development settings - unsuitable for production
@@ -31,7 +26,7 @@ SECRET_KEY = "django-insecure-6udn^j#$k4l@%9=2@mq@o*_sd2zd^%vty%3dwh!k7y8e*rjd#4
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['13.60.65.147', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
