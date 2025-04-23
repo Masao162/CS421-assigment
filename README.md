@@ -1,7 +1,7 @@
 # CS421-assigment
 Assignment for CS 421: Deployed API with /students and /subjects endpoints using django. Includes GitHub commits, README with setup instructions, and AWS deployment. Public URLs provided
 
-#Types of backup
+# Types of backup
     1. Full Backup   
 -  What it is:  Makes a complete copy of all your selected files and data.  
 -  Good things:  Easy to restore everything because all data is in one backup.  
