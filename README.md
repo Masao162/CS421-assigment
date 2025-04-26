@@ -58,17 +58,13 @@ These scripts are designed for use on an Ubuntu server to help automate routine 
 
 ---
 
+🔐 Giving Execute Permission
+To run the scripts, you first need to make them executable. You can do this by running the following commands:
 
-###🔐 Giving Execute Permission
-
-Before running the scripts, you need to make them executable. Run the following command for each script:
-
-```bash
+bash
 chmod +x update.sh
 chmod +x health_check.sh
 chmod +x backup.sh
-
----
 
 ## CS421 Assignment Docker Setup 
 
