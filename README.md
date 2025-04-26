@@ -62,9 +62,9 @@ These scripts are designed for use on an Ubuntu server to help automate routine 
 
 Before running the scripts, you need to make them executable. Run the following command for each script:
 
-```bash
+```bash```
 chmod +x update.sh
 chmod +x health_check.sh
 chmod +x backup.sh
 
-### docker 
+### docker
