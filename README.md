@@ -58,6 +58,7 @@ These scripts are designed for use on an Ubuntu server to help automate routine 
 
 ---
 
+
 ###🔐 Giving Execute Permission
 
 Before running the scripts, you need to make them executable. Run the following command for each script:
@@ -66,4 +67,75 @@ Before running the scripts, you need to make them executable. Run the following 
 chmod +x update.sh
 chmod +x health_check.sh
 chmod +x backup.sh
+
+---
+
+## CS421 Assignment Docker Setup 
+
+a guide explains how to download and run the Docker image for the CS421 Assignment.
+
+###  Prerequisites 
+
+- Docker must be installed on your system. If you don’t have Docker, follow the installation instructions for your operating system:
+  - [Install Docker on Ubuntu](https://docs.docker.com/engine/install/ubuntu/)
+  - [Install Docker on Windows](https://docs.docker.com/desktop/install/windows-install/)
+  - [Install Docker on macOS](https://docs.docker.com/desktop/install/mac-install/)
+
+###  Steps to Download and Install the Docker Image 
+
+1.  Login to Docker Hub   
+   First, you need to log in to Docker Hub (if you haven’t already). Run the following command:
+   ```bash
+   docker login
+   ```
+   Enter your  Docker Hub username  and  password  when prompted.
+
+2.  Download the Docker Image   
+   To pull the image from Docker Hub, use the following command:
+   ```bash
+   docker pull dave47/cs421-assigment:cs421-assigment-web
+   ```
+
+3.  Run the Docker Image   
+   After downloading, you can run the image using this command:
+   ```bash
+   docker run -d --name cs421-assigment-web -p 8080:80 dave47/cs421-assigment:cs421-assigment-web
+   ```
+   - `-d` will run the container in detached mode (in the background).
+   - `--name cs421-assigment-web` gives the container a name.
+   - `-p 8080:80` maps port 8080 on your system to port 80 inside the container, so you can access the app via `http://localhost:8080` in your browser.
+
+4.  Verify the Container is Running   
+   You can check if the container is running by listing the running containers:
+   ```bash
+   docker ps
+   ```
+   You should see the `cs421-assigment-web` container in the list.
+
+5.  Access the Web Application   
+   Open your browser and go to `http://localhost:8080` to access the CS421 Assignment application.
+
+6.  Stopping the Docker Container   
+   To stop the running container, run:
+   ```bash
+   docker stop cs421-assigment-web
+   ```
+
+7.  Removing the Docker Container   
+   If you want to remove the container after use, run:
+   ```bash
+   docker rm cs421-assigment-web
+   ```
+
+---
+
+###  Troubleshooting 
+
+-  Docker image not found : Ensure you’ve logged in with the correct Docker Hub credentials and that you’ve pulled the correct image name (`dave47/cs421-assigment:cs421-assigment-web`).
+-  Port already in use : If port `8080` is already in use, you can change it to another available port, e.g., `-p 8081:80`.
+
+---
+
+
+
 
