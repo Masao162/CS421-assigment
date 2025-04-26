@@ -11,11 +11,11 @@ WORKDIR /home/app
 
 COPY . .
 
-RUN python3 -m venv env
-RUN . ./env/bin/activate && pip install --upgrade pip && pip install -r requirements.txt
-RUN . ./env/bin/activate && python manage.py makemigrations
-RUN . ./env/bin/activate && python manage.py migrate
+RUN pip install --upgrade pip
+RUN pip install -r requirements.txt
+RUN python manage.py makemigrations
+RUN python manage.py migrate
 
-CMD ./env/bin/python manage.py runserver 0.0.0.0:8000
+CMD ["python", "manage.py", "runserver", "0.0.0.0:8000"]
 
 EXPOSE 8000
