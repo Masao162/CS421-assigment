@@ -1,6 +1,6 @@
-!/bin/bash
+#!/bin/bash
 
-SOURCE_DIR="/home/ubuntu/CS421-assigment"
+SOURCE_DIR="/home/ubuntu/app"
 DATE=$(date +%F)
 TARGET_DIR="/home/ubuntu/backups"
 BACKUP_FILE="$TARGET_DIR/api_backup_$DATE.tar.gz"

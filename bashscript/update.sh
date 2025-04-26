@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 file="/var/log/update.log"
-repo_dir="/home/ubuntu/CS421-assigment"
+repo_dir="/home/ubuntu/app"
 log() {
     echo "$(date) - $1"
 }
